@@ -1,0 +1,18 @@
+// ==========
+// COLOR
+// -----
+// An easy way to get colors from the $colors map that is
+// located in variables/colors.
+//
+// USAGE:
+// -----
+// Usage the color in any properties or variable assignments
+//
+// .test {
+//   background-color: color(color-name);
+// }
+// ==========
+
+@function color($color, $map: $colors) {
+  @return map-get($map, $color);
+}
