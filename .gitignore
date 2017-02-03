@@ -8,3 +8,4 @@ gulpfile.js
 # Mac stuff
 /.DS_Store
 gulpfile.js
+dist/style.css
