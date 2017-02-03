@@ -1,3 +1,7 @@
+@import "variables/breakpoints";
+@import "variables/colors";
+@import "variables/typography";
+
 @import "base/functions";
 @import "base/mixins";
 @import "base/normalize";
@@ -5,7 +9,3 @@
 @import "modules/global_footer";
 @import "modules/global_header";
 @import "modules/global_menu";
-
-@import "variables/breakpoints";
-@import "variables/colors";
-@import "variables/typography";

@@ -1,3 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:700|Roboto+Slab|Roboto:400,700");
+/* line 7, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+.logo {
+  font-family: Javanese, Georgia, 'Times New Roman', serif;
+}
+
+/* line 13, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+html, p {
+  font-family: Roboto, Arial, 'Helvetica', sans-serif;
+}
+
+/* line 16, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', Courier, Arial, Helvetica, sans-serif;
+}
+
+/* line 20, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+html {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* line 28, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  margin-top: 0;
+}
+
+/* line 33, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+h1 {
+  color: color(primary);
+  font-size: 2rem;
+}
+
+/* line 37, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+h2 {
+  color: color(gray);
+  font-size: 1.5rem;
+}
+
+/* line 41, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+h3 {
+  color: color(primary);
+  font-size: 1.17rem;
+}
+
+/* line 45, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+h4 {
+  color: color(secondary);
+  font-size: 1rem;
+}
+
+/* line 49, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+h5 {
+  color: color(tertiary);
+  font-size: .87rem;
+}
+
+/* line 53, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+h6 {
+  color: color(gray);
+  font-size: .67rem;
+}
+
+/* line 60, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+p + p {
+  margin-top: 1em;
+}
+
+/* line 65, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+figcaption {
+  font-style: italic;
+  font-size: 0.8125em;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* line 71, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+blockquote {
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 75, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
+blockquote p {
+  color: color(primary);
+  font-size: 1.125em;
+}
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -7,7 +96,6 @@
  */
 /* Document
    ========================================================================== */
-@import url("https://fonts.googleapis.com/css?family=Lora:700|Roboto+Slab|Roboto:400,700");
 /* line 13, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/base/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -491,88 +579,11 @@ template {
   display: none;
 }
 
-/* line 7, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-.logo {
-  font-family: Javanese, Georgia, 'Times New Roman', serif;
-}
-
-/* line 13, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-html, p {
-  font-family: Roboto, Arial, 'Helvetica', sans-serif;
-}
-
-/* line 16, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Slab', Courier, Arial, Helvetica, sans-serif;
-}
-
-/* line 20, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-html {
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-/* line 28, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-  margin-top: 0;
-}
-
-/* line 33, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-h1 {
-  color: #0AB5D0;
-  font-size: 2rem;
-}
-
-/* line 37, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-h2 {
-  font-size: 1.5rem;
-}
-
-/* line 41, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-h3 {
-  color: #0AB5D0;
-  font-size: 1.17rem;
-}
-
-/* line 45, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-h4 {
-  color: #000;
-  font-size: 1rem;
-}
-
-/* line 49, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-h5 {
-  color: #fff;
-  font-size: .87rem;
-}
-
-/* line 53, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-h6 {
-  font-size: .67rem;
-}
-
-/* line 60, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-p + p {
-  margin-top: 1em;
-}
-
-/* line 65, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-figcaption {
-  font-style: italic;
-  font-size: 0.8125em;
-  text-align: center;
-  padding: 0.5rem;
-}
-
-/* line 71, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-blockquote {
-  font-style: italic;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* line 75, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/variables/_typography.scss */
-blockquote p {
-  color: #0AB5D0;
-  font-size: 1.125em;
+/* line 1, D:/MAMP/htdocs/crane/wp-content/themes/crane/build/scss/modules/_global_header.scss */
+.site-header {
+  width: 100%;
+  max-width: 90em;
+  border: 1px solid #000;
+  margin: 0 auto;
+  padding: 1em;
 }
