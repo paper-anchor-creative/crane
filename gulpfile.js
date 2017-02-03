@@ -32,12 +32,12 @@ gulp.task( 'server', function() {
   watch( './**/*.php', reload);
 
   // Recompile sass into CSS whenever we update any of the source files
-  watch( './scss/**/*.scss', function() {
+  watch( './build/scss/**/*.scss', function() {
     gulp.start( 'scss' );
   });
 
   // Watch our JavaScript files and report any errors. May ruin your day.
-  watch( './js/**/*.js', function() {
+  watch( './build/js/**/*.js', function() {
     // gulp.start( 'jshint' );
   });
 });
@@ -45,10 +45,10 @@ gulp.task( 'server', function() {
 
 // Processes SASS and reloads browser.
 gulp.task( 'scss', function() {
-  return gulp.src( './scss/style.scss' )
+  return gulp.src( './build/scss/style.scss' )
     .pipe( plumber( { errorHandler: onError } ) )
     .pipe( sass() )
-    .pipe( gulp.dest( '.' ) )
+    .pipe( gulp.dest( 'dist' ) )
     .pipe( reload( { stream: true } ) );
 } );
 

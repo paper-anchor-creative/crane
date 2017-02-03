@@ -107,6 +107,8 @@ add_action( 'widgets_init', 'paper_anchor_widgets_init' );
 function paper_anchor_scripts() {
 	wp_enqueue_style( 'paper-anchor-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'paper-anchor-crane-styles', get_template_directory_uri() . '/dist/style.css', array(), '20151215', false );
+
 	wp_enqueue_script( 'paper-anchor-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'paper-anchor-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
