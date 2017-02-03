@@ -47,7 +47,10 @@ gulp.task( 'server', function() {
 gulp.task( 'scss', function() {
   return gulp.src( './build/scss/style.scss' )
     .pipe( plumber( { errorHandler: onError } ) )
-    .pipe( sass() )
+    .pipe( sass({
+      outputStyle: 'expanded',
+      sourceComments: 'map'
+    }))
     .pipe( gulp.dest( 'dist' ) )
     .pipe( reload( { stream: true } ) );
 } );
