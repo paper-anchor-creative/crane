@@ -1,0 +1,17 @@
+.site-footer {
+	margin: 2em 0 0 0;
+	padding: 1.5em;
+	text-align: center;
+	font-weight: bolder;
+	color: color(white);
+	background-color: color(primary);
+
+	a {
+		color: color(gray-10);
+		text-decoration: none;
+	}
+
+	.sep {
+		padding: 0 .85em;
+	}
+}
