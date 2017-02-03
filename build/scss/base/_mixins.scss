@@ -4,7 +4,7 @@
 // http://css-tricks.com/snippets/css/clear-fix/
 // ==========
 
-@mixin cf {
+.clearfix {
   &:after {
     content: "";
     display: table;
@@ -21,4 +21,3 @@
 		@content;
 	}
 }
-
