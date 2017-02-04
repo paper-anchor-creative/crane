@@ -15,6 +15,8 @@ function init_crane_settings_page() {
 function register_my_cool_plugin_settings() {
 	//register our settings
 	register_setting( 'crane-settings-group', 'logo' );
+    register_setting( 'crane-settings-group', 'logo2x' );
+    register_setting( 'crane-settings-group', 'logo3x' );
 	register_setting( 'crane-settings-group', 'google_ua_code' );
 	register_setting( 'crane-settings-group', 'option_etc' );
 }
@@ -29,13 +31,35 @@ function crane_settings_page() {
     <?php do_settings_sections( 'crane-settings-group' ); ?>
     <table class="form-table">
         <tr valign="top">
-        <th scope="row">Logo Location</th>
-        <td><input type="text" name="logo" value="<?php echo esc_attr( get_option('logo') ); ?>" /></td>
+        <th scope="row">Logo (1x)</th>
+        <td>
+            <input type="text" name="logo" value="<?php echo esc_attr( get_option('logo') ); ?>" />
+            <p class="description">Include the path to the media file.</p>
+        </td>
+        </tr>
+
+        <tr valign="top">
+        <th scope="row">Logo (2x)</th>
+        <td>
+            <input type="text" name="logo2x" value="<?php echo esc_attr( get_option('logo2x') ); ?>" />
+            <p class="description">Include the path to the media file.</p>
+        </td>
+        </tr>
+
+        <tr valign="top">
+        <th scope="row">Logo (3x)</th>
+        <td>
+            <input type="text" name="logo3x" value="<?php echo esc_attr( get_option('logo3x') ); ?>" />
+            <p class="description">Include the path to the media file.</p>
+        </td>
         </tr>
          
         <tr valign="top">
         <th scope="row">Google Tracking ID (UA Code)</th>
-        <td><input type="text" name="google_ua_code" value="<?php echo esc_attr( get_option('google_ua_code') ); ?>" /></td>
+        <td>
+            <input type="text" name="google_ua_code" value="<?php echo esc_attr( get_option('google_ua_code') ); ?>" />
+            <p class="description">This address is used for admin purposes, like new user notification.</p>
+        </td>
         </tr>
     </table>
     
