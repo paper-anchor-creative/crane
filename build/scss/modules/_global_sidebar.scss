@@ -1,0 +1,11 @@
+.widget-area {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  background-color: color(gray-05);
+  font-size: 12px;
+  @include media($large) {
+    width: 25%;
+    float: right;
+  }
+}
