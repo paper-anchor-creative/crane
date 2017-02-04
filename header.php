@@ -21,8 +21,6 @@
 
 <body <?php body_class(); ?>>
 
-<img src="<?php echo esc_attr( get_option('logo') ); ?>" alt="<?php bloginfo( 'name' ); ?>">
-
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'paper-anchor' ); ?></a>
 
@@ -31,7 +29,23 @@
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title">
+						<?php 
+							$logo = get_option('logo');
+							$logo2x = get_option('logo2x'); 
+							$logo3x = get_option('logo3x');  
+						?>
+						<?php if ( !empty($logo) )  : ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" rel="home">
+								<img src="<?php echo esc_attr( $logo ); ?>" srcset="<?php echo esc_attr( $logo2x ); ?> 1000w, <?php echo esc_attr( $logo3x ); ?> 2000w" alt="<?php bloginfo( 'name' ); ?>">
+							</a>
+						<?php else : ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="no-logo" rel="home">
+								<?php bloginfo( 'name' ); ?>
+							</a>
+						<?php endif; ?>
+					
+				</h1>
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
