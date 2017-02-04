@@ -112,7 +112,7 @@ ul {
 
     li {
         margin-bottom: 6px;
-
+        line-height: 1.6;
         &:before {
             content: '\25A0';
             margin-right: 0.35em;
@@ -127,7 +127,7 @@ ol {
 
     li {
         counter-increment: li;
-
+        line-height: 1.6;
         ul {
             list-style: none;
 
