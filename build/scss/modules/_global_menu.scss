@@ -1,3 +1,55 @@
-.site-navigation {
+.main-navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.menu {
+  display: block;
+}
+.menu-toggle {
+  //mobile styles
+  @include media($large) {
+    display: none;
+  }
+}
+.nav-menu {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: -4px;
+      top: 0;
+      height: 1.25em;
+      width: 2px;
+      margin-top: 1em;
+      background-color: color(white);
+    }
+    &:last-child:after {
+      display: none;
+    }
+    a {
+      display: inline-block;
+      padding: 1em;
 
+      font-weight: bolder;
+      color: color(white);
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all .25s;
+      &:hover {
+        text-shadow: 0 0 1px rgba(255,255,255,0.35);
+        color: rgba(0,0,0,.5);
+      }
+    }
+  }
 }

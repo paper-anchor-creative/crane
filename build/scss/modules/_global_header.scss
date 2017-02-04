@@ -1,7 +1,22 @@
 .site-header {
+  display: block;
+  position: relative;
   width: 100%;
-  max-width: $xl;
-  border: 1px solid $black;
+  background: color(primary); /* For browsers that do not support gradients */
+
+  // Gradient Background
+  // background: -webkit-linear-gradient(color(primary-light), color(primary)); /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(color(primary-light), color(primary)); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(color(primary-light), color(primary)); /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(color(primary-light), color(primary)); /* Standard syntax */
+}
+.masthead {
+  max-width: $xl; //Remove for full-width sites
   margin: 0 auto;
   padding: 1em;
+  position: relative;
+}
+
+.site-branding {
+  display: inline-block;
 }
