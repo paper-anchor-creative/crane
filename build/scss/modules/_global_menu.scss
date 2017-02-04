@@ -1,55 +1,88 @@
 .main-navigation {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  background-color: color(primary-dark);
+  padding: 0 1em;
+ @include media($medium) {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   padding: 0;
+   background-color: inherit;
+ }
 }
+
+.menu-toggle {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    margin: 0;
+    border: 0;
+    background-color: color(primary-dark);
+    color: color(white);
+    cursor: pointer;
+    @include media($large) {
+        display: none;
+    }
+}
+
 .menu {
   display: block;
 }
-.menu-toggle {
-  //mobile styles
-  @include media($large) {
-    display: none;
-  }
-}
-.nav-menu {
-  display: block;
-  margin: 1em 0;
-  padding: 0;
-  list-style-type: none;
-  li {
-    display: inline-block;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    border-collapse: collapse;
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      right: -4px;
-      top: 0;
-      height: 1.25em;
-      width: 2px;
-      margin-top: 1em;
-      background-color: color(white);
-    }
-    &:last-child:after {
-      display: none;
-    }
-    a {
-      display: inline-block;
-      padding: 1em;
 
-      font-weight: bolder;
-      color: color(white);
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all .25s;
-      &:hover {
-        text-shadow: 0 0 1px rgba(255,255,255,0.35);
-        color: rgba(0,0,0,.5);
+.nav-menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: block;
+    li {
+      &:last-child {
+        padding-bottom: .5em;
       }
+      &:first-child {
+        padding-top: .5em;
+      }
+        a {
+          width: 100%;
+          display: inline-block;
+          padding: 0.5em;
+          color: color(white);
+          font-weight: bolder;
+          text-transform: uppercase;
+          text-decoration: none;
+          text-align: center;
+          transition: all 0.25s;
+          &:hover {
+              text-shadow: 0 0 1px rgba(255,255,255,0.35);
+              color: rgba(0,0,0,.5);
+            }
+        }
+        @include media($medium) {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: -4px;
+                top: 0;
+                height: 1.25em;
+                width: 2px;
+                margin-top: 1em;
+                background-color: color(white);
+            }
+            &:last-child, &:first-child {
+              padding: inherit;
+            }
+            &:last-child:after {
+                display: none;
+            }
+
+            a {
+              width: auto;
+              padding: 1em;
+            }
+        }
     }
-  }
 }

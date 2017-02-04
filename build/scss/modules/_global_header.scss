@@ -1,6 +1,5 @@
 .site-header {
   display: block;
-  position: relative;
   width: 100%;
   background: color(primary); /* For browsers that do not support gradients */
 
@@ -13,10 +12,10 @@
 .masthead {
   max-width: $xl; //Remove for full-width sites
   margin: 0 auto;
-  padding: 1em;
   position: relative;
 }
 
 .site-branding {
   display: inline-block;
+  margin-left: 1em;
 }
