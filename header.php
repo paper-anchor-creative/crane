@@ -20,6 +20,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<img src="<?php echo esc_attr( get_option('logo') ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'paper-anchor' ); ?></a>
 
