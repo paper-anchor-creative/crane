@@ -89,6 +89,43 @@ a {
   }
 }
 
+//List style - colored bullets and numbers
+ul {
+  list-style: none;
+  overflow: hidden;
+  padding-bottom: 4px; //Fixes link underline being clipped from "overflow: hidden;" when the last list item contains a link.
+  color: color(primary);
+  li {
+    margin-bottom: 6px;
+    &:before {
+      content: '\25A0';
+      margin-right: .35em;
+    }
+  }
+}
+ol {
+  list-style: none;
+  counter-reset: li;
+  color: color(primary);
+  li {
+    counter-increment: li;
+    ul {
+      list-style: none;
+      li {
+        counter-increment: unset;
+        &:before {
+          content: '\25A0';
+          margin-right: .35em;
+        }
+      }
+    }
+  }
+  li:before {
+    content: counter(li) '. ';
+    font-weight: bolder;
+  }
+}
+
 .logo {
   @extend %serif;
 }
