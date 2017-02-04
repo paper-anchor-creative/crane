@@ -1,8 +1,5 @@
 .content-area {
-  width: 100%;
+  display: inline-block;
   max-width: $xl;
   padding: 1em;
-  @include media($large) {
-    width: inherit;
-  }
 }
