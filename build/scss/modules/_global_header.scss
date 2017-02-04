@@ -1,4 +1,5 @@
 %gradient-background {
+  background: color(primary); /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(color(primary-light), color(primary)); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(color(primary-light), color(primary)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(color(primary-light), color(primary)); /* For Firefox 3.6 to 15 */
@@ -8,7 +9,6 @@
 .site-header {
   display: block;
   width: 100%;
-  background: color(primary); /* For browsers that do not support gradients */
 
   // Gradient Background
   @extend %gradient-background;
