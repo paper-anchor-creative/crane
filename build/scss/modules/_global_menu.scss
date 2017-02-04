@@ -1,0 +1,104 @@
+.main-navigation {
+    padding: 1em;
+    background-color: color(primary);
+    @include media($medium) {
+        padding: 0;
+        text-align: center;
+    }
+    @include media($large) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 1em;
+        padding: 0;
+        background-color: inherit;
+    }
+}
+
+.menu-toggle {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 0.5em;
+    border: 0;
+    background-color: color(primary-light);
+    color: color(white);
+    cursor: pointer;
+    @include media($medium) {
+        display: none;
+    }
+}
+
+.menu {
+    display: none;
+    .toggled & {
+        display: block;
+    }
+    @include media($medium) {
+        display: block;
+        width: 100%;
+    }
+}
+
+.nav-menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: block;
+    li {
+        a {
+          display: inline-block;
+            width: 100%;
+            padding: 1em;
+            border-bottom: 1px solid color(primary-light);
+            color: color(white);
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.25s;
+            &:hover {
+                text-shadow: 0 0 1px rgba(255,255,255,0.35);
+                color: rgba(0,0,0,.5);
+            }
+        }
+        &:last-child a {
+            padding-bottom: .5em;
+            border-bottom: 0;
+        }
+        @include media($medium) {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -4px;
+                height: 1.25em;
+                width: 2px;
+                margin-top: 1em;
+                background-color: color(white);
+            }
+
+            &:first-child,
+            &:last-child {
+                padding: inherit;
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+
+            a {
+                width: auto;
+                padding: 1em;
+                font-weight: bolder;
+                border: 0;
+            }
+        }
+    }
+}
