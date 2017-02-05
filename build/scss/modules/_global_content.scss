@@ -3,3 +3,11 @@
   max-width: $xl;
   padding: 1em;
 }
+
+.page-template-page-full-width {
+	.content-area {
+		display: block;
+		max-width: 100%;
+		padding: inherit;
+	}
+}

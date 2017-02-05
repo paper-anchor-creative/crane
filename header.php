@@ -30,24 +30,38 @@
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title">
-						<?php 
-							$logo = get_option('logo');
-							$logo2x = get_option('logo2x'); 
-							$logo3x = get_option('logo3x');  
-						?>
-						<?php if ( !empty($logo) )  : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" rel="home">
-								<img src="<?php echo esc_attr( $logo ); ?>" srcset="<?php echo esc_attr( $logo2x ); ?> 1000w, <?php echo esc_attr( $logo3x ); ?> 2000w" alt="<?php bloginfo( 'name' ); ?>">
-							</a>
-						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="no-logo" rel="home">
-								<?php bloginfo( 'name' ); ?>
-							</a>
-						<?php endif; ?>
-					
+					<?php 
+						$logo = get_option('logo');
+						$logo2x = get_option('logo2x'); 
+						$logo3x = get_option('logo3x');  
+					?>
+					<?php if ( !empty($logo) )  : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" rel="home">
+							<img src="<?php echo esc_attr( $logo ); ?>" srcset="<?php echo esc_attr( $logo2x ); ?> 1000w, <?php echo esc_attr( $logo3x ); ?> 2000w" alt="<?php bloginfo( 'name' ); ?>">
+						</a>
+					<?php else : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="no-logo" rel="home">
+							<?php bloginfo( 'name' ); ?>
+						</a>
+					<?php endif; ?>
 				</h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title">
+					<?php 
+						$logo = get_option('logo');
+						$logo2x = get_option('logo2x'); 
+						$logo3x = get_option('logo3x');  
+					?>
+					<?php if ( !empty($logo) )  : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" rel="home">
+							<img src="<?php echo esc_attr( $logo ); ?>" srcset="<?php echo esc_attr( $logo2x ); ?> 1000w, <?php echo esc_attr( $logo3x ); ?> 2000w" alt="<?php bloginfo( 'name' ); ?>">
+						</a>
+					<?php else : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="no-logo" rel="home">
+							<?php bloginfo( 'name' ); ?>
+						</a>
+					<?php endif; ?>
+				</p>
 			<?php
 			endif;
 
