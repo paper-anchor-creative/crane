@@ -104,6 +104,7 @@ a {
 //List style - colored bullets and numbers
 ul {
     list-style: none;
+    padding-left: 1em;
     padding-bottom: 4px; //Fixes link underline being clipped from "overflow: hidden;" when the last list item contains a link.
     color: color(primary);
     .site-content & {
@@ -121,6 +122,7 @@ ul {
 }
 
 ol {
+    padding-left: 1em;
     list-style: none;
     counter-reset: li;
     color: color(primary);
