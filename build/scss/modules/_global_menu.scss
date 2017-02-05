@@ -19,7 +19,6 @@
     display: block;
     width: 100%;
     padding: 0.75em;
-    margin-bottom: 0.5em;
     border: 0;
     background-color: color(primary-light);
     color: color(white);
@@ -31,7 +30,6 @@
 
 .menu {
     display: none;
-
     .toggled & {
         display: block;
     }
@@ -45,15 +43,15 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
-    display: block;
 
     li {
+      margin: 0;
         &:before {
             display: none;
         }
 
         &:last-child a {
-            padding-bottom: 0.5em;
+            padding-bottom: 0.25em;
             border-bottom: 0;
         }
 
