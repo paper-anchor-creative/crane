@@ -3,8 +3,6 @@
 /.tmp
 /.sass-cache
 /bower_components
-gulpfile.js
-dist/style.css
 
 # Mac stuff
 /.DS_Store
