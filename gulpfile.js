@@ -37,6 +37,7 @@ gulp.task( 'server', function() {
   // Recompile sass into CSS whenever we update any of the source files
   watch( './build/scss/**/*.scss', function() {
     gulp.start( 'scss' );
+    gulp.start( 'todo' );
   });
 
   // Watch our JavaScript files and report any errors. May ruin your day.
@@ -55,7 +56,6 @@ gulp.task( 'scss', function() {
       outputStyle: 'compressed',
     }))
     .pipe(autoprefixer())
-    .pipe( todo())
     .pipe(sourcemaps.write('./'))
     .pipe( gulp.dest( 'dist' ) )
     .pipe( reload( { stream: true } ) );
@@ -71,10 +71,16 @@ gulp.task( 'jshint', function() {
     .pipe( jshint.reporter( 'fail' ) );
 });
 
+gulp.task('todo', function() {
+    gulp.src('./build/scss/**/*.scss')
+        .pipe(todo())
+        .pipe(gulp.dest('dist'));
+        // -> Will output a TODO.md with your todos
+});
 
 // The default task. When developting just run 'gulp' and this is what will be ran.
 // Note the second parameter, those are dependency tasks which need to be done
 // before the main function (third parameter) is called.
-gulp.task( 'default', [ 'scss', 'server' ], function() {
+gulp.task( 'default', [ 'scss', 'todo', 'server' ], function() {
   console.log('done');
 } );
