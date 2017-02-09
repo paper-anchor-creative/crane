@@ -1,13 +1,10 @@
-.content-area {
-  display: inline-block;
+//Beaver Builder Style Overrides
+
+.fl-row-fixed-width {
   max-width: $xl;
-  padding: 1em;
 }
 
-.page-template-page-full-width {
-	.content-area {
-		display: block;
-		max-width: 100%;
-		padding: inherit;
-	}
+.content-area {
+  display: block;
+  width: 100%
 }
