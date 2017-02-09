@@ -1,4 +1,4 @@
-// TODO Figure out how to handle text color and text transform overrides in Beaver Builder? Maybe a "Color Override" dropdown that pulls in the primary, secondary, and tertiary color variables?
+// TODO: Figure out how to handle text color and text transform overrides in Beaver Builder? Maybe a "Color Override" dropdown that pulls in the primary, secondary, and tertiary color variables?
 
 .text-gray h1 {
   color: #58595b;
@@ -9,7 +9,7 @@
   text-transform: uppercase;
 }
 
-// TODO Also figure out how we want to handle help classes in Beaver Builder...
+// TODO: Also figure out how we want to handle help classes in Beaver Builder...
 
   .left {
     float: left;
@@ -33,7 +33,7 @@
   	font-weight: 400;
   }
 
-// TODO Figure out how to handle specific styles on repeatable elements -- Why Encore column headings
+// TODO: Figure out how to handle specific styles on repeatable elements -- Why Encore column headings
 
 .why-encore {
   display: block;

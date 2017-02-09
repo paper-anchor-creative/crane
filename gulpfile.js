@@ -8,6 +8,7 @@ var gulp           = require( 'gulp' ),
     sourcemaps     = require( 'gulp-sourcemaps' ),
     autoprefixer   = require( 'gulp-autoprefixer' ),
     plumber        = require( 'gulp-plumber' ),
+    todo           = require( 'gulp-todo' ),
     browserSync    = require( 'browser-sync' ),
     jshint         = require( 'gulp-jshint' ),
     stylish        = require( 'jshint-stylish' ),
@@ -54,6 +55,7 @@ gulp.task( 'scss', function() {
       outputStyle: 'compressed',
     }))
     .pipe(autoprefixer())
+    .pipe( todo())
     .pipe(sourcemaps.write('./'))
     .pipe( gulp.dest( 'dist' ) )
     .pipe( reload( { stream: true } ) );
