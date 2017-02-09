@@ -1,0 +1,54 @@
+.fl-row-fixed-width {
+	max-width: 90rem;
+}
+
+.fl-row-content-wrap {
+	padding: 0;
+}
+
+.fl-module-content {
+	margin: 1.5em;
+}
+
+	.fl-module-hero-block .fl-module-content {
+		margin: 0;
+	}
+
+.fl-row .fl-row-content-wrap {
+	margin-top: 1.5em;
+}
+
+.fl-row-fixed-width .fl-row-content-wrap {
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+}
+
+.fl-row:last-child .fl-row-content-wrap {
+	margin-bottom: 1.5em;
+}
+
+.fl-module-heading .fl-module-content {
+	margin-bottom: 0;
+}
+
+.fl-module-rich-text .fl-module-content {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.fl-module-heading ~ .fl-module-heading .fl-module-content {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.badge {
+	position: absolute;
+    right: -20px;
+    bottom: -60px;
+    max-width: 325px;
+    z-index: 9999;
+}
+
+.entry-footer {
+	display: none;
+}

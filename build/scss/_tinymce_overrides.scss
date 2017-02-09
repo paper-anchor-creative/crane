@@ -1,0 +1,9 @@
+// Hide TinyMCE functions we don't want the client to have access to
+
+.fl-builder #mceu_54,
+.fl-builder #mceu_59,
+.fl-builder #mceu_65,
+.fl-builder #mceu_66,
+.fl-builder #mceu_81 {
+	display: none;
+}

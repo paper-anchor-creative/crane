@@ -1,0 +1,54 @@
+// TODO Figure out how to handle text color and text transform overrides in Beaver Builder? Maybe a "Color Override" dropdown that pulls in the primary, secondary, and tertiary color variables?
+
+.text-gray h1 {
+  color: #58595b;
+}
+
+.red-caps h1, .red-caps h2, .red-caps h3, .red-caps h4 {
+  color: #dd674c;
+  text-transform: uppercase;
+}
+
+// TODO Also figure out how we want to handle help classes in Beaver Builder...
+
+  .left {
+    float: left;
+    margin: 1em 1em 1em 0;
+  }
+
+  .right {
+    float: right;
+    margin: 1em 0 1em 1em;
+  }
+
+  .serif,
+  .serif h1,
+  .serif h2,
+  .serif h3,
+  .serif h4,
+  .serif h5,
+  .serif h6,
+  .serif p {
+  	@extend %serif;
+  	font-weight: 400;
+  }
+
+// TODO Figure out how to handle specific styles on repeatable elements -- Why Encore column headings
+
+.why-encore {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.why-encore h3 {
+  color: #58595b;
+}
+
+.why-encore h3 span {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+}
