@@ -9,7 +9,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        margin: 1em;
+        margin: 1em 1.5em;
         padding: 0;
         background-color: inherit;
     }
@@ -49,10 +49,8 @@
         &:before {
             display: none;
         }
-
-        &:last-child a {
-            padding-bottom: 0.25em;
-            border-bottom: 0;
+        &:after {
+          margin-top: 1.25em;
         }
 
         a {
@@ -86,7 +84,7 @@
                 right: -4px;
                 height: 1.25em;
                 width: 2px;
-                margin-top: 1em;
+                margin-top: 1.25em;
                 background-color: color(white);
             }
 

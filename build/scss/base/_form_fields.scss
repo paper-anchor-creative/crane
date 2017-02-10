@@ -1,0 +1,47 @@
+label {
+	text-transform: uppercase;
+	font-weight: bolder;
+	color: #58595b;
+}
+
+label input {
+	margin-top: .2em;
+}
+input, textarea {
+	background-color: #d6d3d3;
+	border: none;
+	padding: .7em .5em .5em .5em;
+	width: 100%;
+	font-size: 1.2em;
+}
+
+input.wpcf7-not-valid, textarea.wpcf7-not-valid {
+	border: 2px solid #f00;
+}
+
+.wpcf7-not-valid-tip {
+	font-size: 80% !important;
+    padding-top: .2em !important;
+}
+
+input[type="submit"] {
+	width: initial;
+	background-color: #ffb33b;
+	color: #58595b;
+	font-weight: bolder;
+	padding: 1em 2.5em;
+	transition: 300ms ease all;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	background-color: #f19709;
+}
+
+input[type="submit"]:active {
+	transform: translate(2px, 2px);
+}
+
+input[type="submit"]:focus {
+	outline: none;
+}

@@ -18,7 +18,7 @@
 html {
     @extend %sans-serif;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 h1,
@@ -65,11 +65,9 @@ h6 {
 }
 
 p {
+    margin: 0;
+    margin-bottom: 1.5em;
     @extend %sans-serif;
-
-    & + p {
-        margin-top: 1em;
-    }
 }
 
 figcaption {
