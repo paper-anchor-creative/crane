@@ -10,8 +10,12 @@
 	background-color: color(gray-80);
 
 	a {
-		color: color(gray-10);
+		color: color(gray-15);
 		border: none;
+		text-decoration: none;
+		&:hover {
+			color: color(white);
+		}
 	}
 
 	.sep {
