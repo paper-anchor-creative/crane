@@ -165,3 +165,61 @@ function crane_ga_tracking_code() { ?>
 	</script>
 <?php }
 add_action( 'wp_footer', 'crane_ga_tracking_code', 10 );
+
+/**
+ * Hide Beaver Builder Advanced Tab for non-admins
+ */
+
+ if ( is_user_logged_in() ) {
+  add_filter('body_class','add_role_to_body');
+  add_filter('admin_body_class','add_role_to_body');
+ }
+ function add_role_to_body($classes) {
+  $current_user = new WP_User(get_current_user_id());
+  $user_role = array_shift($current_user->roles);
+  if (is_admin()) {
+  $classes .= $user_role;
+  } else {
+  $classes[] = $user_role;
+  }
+  return $classes;
+ }
+
+/**
+ * Customize TinyMCE
+ * More at https://codex.wordpress.org/TinyMCE
+ */
+
+ function TinyMCE_settings( $in ) {
+ 	$in['remove_linebreaks'] = false;
+ 	$in['gecko_spellcheck'] = true;
+ 	$in['keep_styles'] = true;
+ 	$in['accessibility_focus'] = false;
+ 	$in['tabfocus_elements'] = 'major-publishing-actions';
+ 	$in['media_strict'] = false;
+ 	$in['paste_remove_styles'] = true;
+ 	$in['paste_remove_spans'] = true;
+ 	$in['paste_strip_class_attributes'] = 'none';
+ 	$in['paste_text_use_dialog'] = true;
+ 	$in['wpeditimage_disable_captions'] = true;
+ 	$in['plugins'] = 'paste,wordpress,wplink,wpdialogs';
+ 	$in['content_css'] = get_template_directory_uri() . "/editor-style.css";
+ 	$in['wpautop'] = true;
+ 	$in['apply_source_formatting'] = false;
+  $in['block_formats'] = "Paragraph=p; Heading 3=h3; Heading 4=h4";
+ 	$in['toolbar1'] = 'bold,italic,link,unlink';
+ 	$in['toolbar2'] = '';
+ 	$in['toolbar3'] = '';
+ 	$in['toolbar4'] = '';
+ 	return $in;
+ }
+ add_filter( 'tiny_mce_before_init', 'TinyMCE_settings' );
+
+ function tab_settings($settings) {
+	 $settings['media_buttons'] = false;
+	 if ( !current_user_can( 'manage_options' ) ) {
+		 $settings['quicktags'] = false;
+	 }
+	 return $settings;
+ }
+ add_filter('wp_editor_settings', 'tab_settings');
