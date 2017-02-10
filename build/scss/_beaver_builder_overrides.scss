@@ -1,3 +1,8 @@
+//Hides Advanced Tab for Editors
+.editor a[href="#fl-builder-settings-tab-advanced"] {
+display: none;
+}
+
 .fl-row-fixed-width {
 	max-width: 90rem;
 }

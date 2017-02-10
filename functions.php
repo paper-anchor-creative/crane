@@ -167,6 +167,25 @@ function crane_ga_tracking_code() { ?>
 add_action( 'wp_footer', 'crane_ga_tracking_code', 10 );
 
 /**
+ * Hide Beaver Builder Advanced Tab for non-admins
+ */
+
+ if ( is_user_logged_in() ) {
+  add_filter('body_class','add_role_to_body');
+  add_filter('admin_body_class','add_role_to_body');
+ }
+ function add_role_to_body($classes) {
+  $current_user = new WP_User(get_current_user_id());
+  $user_role = array_shift($current_user->roles);
+  if (is_admin()) {
+  $classes .= $user_role;
+  } else {
+  $classes[] = $user_role;
+  }
+  return $classes;
+ }
+
+/**
  * Customize TinyMCE
  * More at https://codex.wordpress.org/TinyMCE
  */
@@ -187,7 +206,7 @@ add_action( 'wp_footer', 'crane_ga_tracking_code', 10 );
  	$in['content_css'] = get_template_directory_uri() . "/editor-style.css";
  	$in['wpautop'] = true;
  	$in['apply_source_formatting'] = false;
-         $in['block_formats'] = "Paragraph=p; Heading 3=h3; Heading 4=h4";
+  $in['block_formats'] = "Paragraph=p; Heading 3=h3; Heading 4=h4";
  	$in['toolbar1'] = 'bold,italic,link,unlink';
  	$in['toolbar2'] = '';
  	$in['toolbar3'] = '';
