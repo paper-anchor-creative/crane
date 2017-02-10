@@ -46,7 +46,7 @@
 					<?php endif; ?>
 				</h1>
 			<?php else : ?>
-				<p class="site-title">
+				<p class="site-title h1">
 					<?php 
 						$logo = get_option('logo');
 						$logo2x = get_option('logo2x'); 

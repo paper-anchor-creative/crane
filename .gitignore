@@ -6,3 +6,5 @@
 
 # Mac stuff
 /.DS_Store
+
+gulpfile.js
