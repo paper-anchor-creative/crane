@@ -1,7 +1,3 @@
-@import "variables/breakpoints";
-@import "variables/colors";
-@import "variables/typography";
-
 @import "base/functions";
 @import "base/mixins";
 @import "base/normalize";
@@ -13,14 +9,8 @@
 @import "variables/colors";
 @import "variables/typography";
 
-@import "modules/global_header";
-@import "modules/global_menu";
-@import "modules/global_footer";
-@import "modules/global_sidebar";
-@import "modules/global_content";
-
-@import "modules/advanced_module_hero_block";
-@import "modules/advanced_module_quote_block";
-
-@import "deal_with_it";
-@import "beaver_builder_overrides";
+@import "layout/global_header";
+@import "layout/global_menu";
+@import "layout/global_footer";
+@import "layout/global_sidebar";
+@import "layout/global_content";
