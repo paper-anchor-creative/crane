@@ -1,10 +1,16 @@
-//Beaver Builder Style Overrides
-
-.fl-row-fixed-width {
-  max-width: $xl;
+.content-area {
+	width: 75%;
+	float: left;
+	display: block
 }
 
-.content-area {
-  display: block;
-  width: 100%
+.page-template-page-full-width {
+	.content-area {
+	  width: 100%;
+	  float: none;
+	}	
+}
+
+.fl-row-fixed-width {
+  max-width: $xl; //BB - Overrides row width
 }

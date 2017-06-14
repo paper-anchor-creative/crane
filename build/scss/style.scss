@@ -7,6 +7,7 @@
 @import "base/normalize";
 @import "base/extends";
 @import "base/form_fields";
+@import "base/typography";
 
 @import "variables/breakpoints";
 @import "variables/colors";
@@ -22,5 +23,4 @@
 @import "modules/advanced_module_quote_block";
 
 @import "deal_with_it";
-@import "tinymce_overrides";
 @import "beaver_builder_overrides";
