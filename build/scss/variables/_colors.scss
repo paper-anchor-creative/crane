@@ -2,17 +2,20 @@
 // COLORS
 // ==========
 
-$primary: #0AB5D0;
+$primary: #320065;
 $primary-light: lighten($primary, 20%);
 $primary-dark: darken($primary, 20%);
 
-$secondary: #000;
+$secondary: #006600;
 $secondary-light: lighten($primary, 20%);
 $secondary-dark: darken($primary, 20%);
 
-$tertiary: #fff;
+$tertiary: #DDA72B;
 $tertiary-light: lighten($primary, 20%);
 $tertiary-dark: darken($primary, 20%);
+
+$link: $primary;
+$linkhover: darken($link, 20%);
 
 $white: #fff;
 $black: #000;
@@ -44,6 +47,8 @@ $colors: (
   tertiary: $tertiary,
   tertiary-light: $tertiary-light,
   tertiary-dark: $tertiary-dark,
+  link: $link,
+  linkhover: $linkhover,
   white: $white,
   black: $black,
   gray-05: $gray-05,

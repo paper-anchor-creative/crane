@@ -1,13 +1,13 @@
+@import "variables/breakpoints";
+@import "variables/colors";
+@import "variables/typography";
+
 @import "base/functions";
 @import "base/mixins";
 @import "base/normalize";
 @import "base/extends";
 @import "base/form_fields";
-@import "base/typography";
-
-@import "variables/breakpoints";
-@import "variables/colors";
-@import "variables/typography";
+@import "base/text_style";
 
 @import "layout/global_header";
 @import "layout/global_menu";
