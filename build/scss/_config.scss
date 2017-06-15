@@ -1,0 +1,10 @@
+/*** CONFIG ***/
+//Use this file to configure master stylesheet output. Only the styles used will be included in the css.
+
+//Header Config
+
+$header_height: 120px; //Minimum 60px;
+%header_color {
+  background-color: color(primary);
+  border-bottom: 5px solid color(secondary);
+}

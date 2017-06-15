@@ -15,14 +15,7 @@ input, textarea {
 	font-size: 1.2em;
 }
 
-input.wpcf7-not-valid, textarea.wpcf7-not-valid {
-	border: 2px solid #f00;
-}
-
-.wpcf7-not-valid-tip {
-	font-size: 80% !important;
-    padding-top: .2em !important;
-}
+//TODO add _buttons.scss partial to /base and extend button styels to input styles below
 
 input[type="submit"] {
 	width: initial;

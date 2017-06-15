@@ -2,17 +2,20 @@
 // COLORS
 // ==========
 
-$primary: #0AB5D0;
+$primary: #320065;
 $primary-light: lighten($primary, 20%);
-$primary-dark: darken($primary, 20%);
+$primary-dark: darken($primary, 10%);
 
-$secondary: #000;
-$secondary-light: lighten($primary, 20%);
-$secondary-dark: darken($primary, 20%);
+$secondary: #DDA72B;
+$secondary-light: lighten($secondary, 20%);
+$secondary-dark: darken($secondary, 10%);
 
-$tertiary: #fff;
-$tertiary-light: lighten($primary, 20%);
-$tertiary-dark: darken($primary, 20%);
+$tertiary: #006600;
+$tertiary-light: lighten($tertiary, 20%);
+$tertiary-dark: darken($tertiary, 10%);
+
+$link: $primary;
+$linkhover: darken($link, 20%);
 
 $white: #fff;
 $black: #000;
@@ -44,6 +47,8 @@ $colors: (
   tertiary: $tertiary,
   tertiary-light: $tertiary-light,
   tertiary-dark: $tertiary-dark,
+  link: $link,
+  linkhover: $linkhover,
   white: $white,
   black: $black,
   gray-05: $gray-05,

@@ -1,21 +1,17 @@
 // Import Default Stack
-@import url( 'https://fonts.googleapis.com/css?family=Lora:700|Roboto+Slab|Roboto:400,700');
+@import url( 'https://fonts.googleapis.com/css?family=EB+Garamond|Roboto:400,700');
 
-%serif {
-    font-family: Javanese, Georgia, 'Times New Roman', serif;
-}
+$serif: "EB Garamond",Georgia,"Times New Roman",serif;
 
-%serif-secondary {
-    font-family: inherit;
-}
 
-%sans-serif {
-    font-family: Roboto, Arial, 'Helvetica', sans-serif;
-}
+$serif-secondary: inherit;
 
-%sans-serif-secondary {
-    font-family: 'Roboto Slab', Courier, Arial, Helvetica, sans-serif;
-}
+
+$sans-serif: Roboto,Arial,"Helvetica",sans-serif;
+
+
+$sans-serif-secondary: inherit;
+
 
 $font-size: 16px;
-$line-height: 1.4;
+$line-height: 1.6;
