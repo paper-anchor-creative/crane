@@ -9,8 +9,10 @@
 @import "base/form_fields";
 @import "base/text_style";
 
+@import "config";
+
 @import "layout/global_header";
-@import "layout/global_menu";
+@import "layout/global_nav";
 @import "layout/global_footer";
 @import "layout/global_sidebar";
 @import "layout/global_content";

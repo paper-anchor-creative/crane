@@ -1,55 +1,64 @@
-%gradient-background {
-    background: color(primary);
-    /* For browsers that do not support gradients -- autoprefix enabled in gulpfile */
-    background: linear-gradient(color(primary-light), color(primary));
-    /* Standard syntax */
-}
-// .admin-bar .site-header {
-//   margin-top: 1em;
-// }
-
-.site-header {
-    display: block;
+.header {
     width: 100%;
-    // Gradient Background
-    @extend %gradient-background;
+    padding: 0;
+    margin: 0;
+    @extend %header_color;
 }
 
 .masthead {
-    max-width: $xl; //Remove for full-width sites
+    height: $header_height;
+    width: 100%;
+    max-width: $xl;
     margin: 0 auto;
+    padding: 0 1em;
     position: relative;
+    display: block;
 }
 
-.site-branding {
+.brand {
     display: block;
-    width: 100%;
-    padding: 1em 1.5em;
-    text-align: center;
-    // Gradient Background
-    @extend %gradient-background;
+    img {
+      max-height: ($header_height * .7);
+      margin-top: ($header_height * .15);
+    }
+}
 
-    .logo {
-        border-bottom: none;
+.nav-container {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    ul {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
 
-        img {
-            max-width: 8.5em;
-            margin-top: 1em;
-            @include media($large) {
-                margin: 1em;
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            &:before {
+              display: none;
+            }
+
+            a {
+                font-family: $serif;
+                font-size: 20px;
+                cursor: pointer;
+                margin: 0;
+                padding: 1em;
+                color: color(white);
+                border: none;
+                background-color: transparent;
+                text-decoration: none;
+                display: inline-block;
+                transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s;
+
+                &:hover {
+                    background-color: color(primary-dark);
+                }
             }
         }
     }
-    @include media($large) {
-        background-color: inherit;
-        text-align: left;
-    }
-}
-
-.site-title {
-    margin: 0;
-}
-
-.site-description {
-    margin: 0;
 }
